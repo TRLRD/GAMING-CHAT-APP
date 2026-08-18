@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaming Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <aside class="sidebar">
+      <h1>🎮 Gaming Chat</h1>
+      <p class="tagline">Talk. Squad up. Play.</p>
+      <div class="card">
+        <div class="label">YOUR NAME</div>
+        <input id="name" maxlength="24" placeholder="Enter gamer tag">
+        <button id="join">Join Lobby</button>
+      </div>
+      <div class="card">
+        <div class="label">ONLINE PLAYERS <span id="count">0</span></div>
+        <ul id="users"></ul>
+      </div>
+    </aside>
+    <section class="chat">
+      <header><div><h2>Lobby</h2><span id="status">Not connected</span></div></header>
+      <div id="messages" class="messages"></div>
+      <form id="form" class="composer">
+        <input id="message" maxlength="500" autocomplete="off" placeholder="Message your squad..." disabled>
+        <button id="send" disabled>Send</button>
+      </form>
+    </section>
+  </main>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
